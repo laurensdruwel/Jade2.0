@@ -1,6 +1,6 @@
 @extends('layouts.home')
 @section('containerTitle')
-    <b>Places</b>
+    Places
 @endsection
 @section('contentContainer')
     <div id="map" style=width:100%;height:30%;></div>
@@ -11,6 +11,14 @@
         <label for="eta">Time</label><br><input type="time" id="eta"><br>
         <button class="ui button">Add Friend</button><button class="ui button">Add Place</button>
     </form>
+
+
+    {{--Recent places--}}
+    <div class="panel-heading "></div>
+    <div class="panel-heading "></div>
+    <div class="panel-body">
+
+    </div>
 
 @endsection
 
