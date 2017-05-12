@@ -29,6 +29,10 @@ Route::get('settings', function () {
 });
 
 Route::get('profile', function () {
+
+
+
+//    $user = DB::select('select * from users where username = :username', ['username' => 1]);
     return view('profile');
 });
 

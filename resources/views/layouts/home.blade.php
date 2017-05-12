@@ -9,7 +9,7 @@
 
 
                     <div class="panel-body">
-                        @yield('containerContent')
+                        @yield('contentContainer')
                     </div>
                 </div>
             </div>
