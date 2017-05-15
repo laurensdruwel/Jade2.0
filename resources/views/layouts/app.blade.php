@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{asset('Semantic-UI-CSS-master/semantic.min.css')}}" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
@@ -54,10 +55,10 @@
                         <li><a href="{{ route('login') }}">Login</a></li>
                         <li><a href="{{ route('register') }}">Register</a></li>
                     @else
-                        <li><a href="places">Places</a></li>
-                        <li><a href="messages">Messages</a></li>
+                        <li><a href="places">Add event</a></li>
+                        {{--<li><a href="messages">Messages</a></li>--}}
                         <li><a href="profile">Profile</a></li>
-                        <li><a href="settings">Settings</a></li>
+                        {{--<li><a href="settings">Settings</a></li>--}}
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                aria-expanded="false">
@@ -91,9 +92,6 @@
 <!-- Scripts -->
 <script src="{{asset('js/jquery-3.2.1.min.js')}}" crossorigin="anonymous"></script>
 <script src="{{ asset('js/app.js') }}"></script>
-
-
-@yield('apiscript')
 
 
 <script src="{{asset('Semantic-UI-CSS-master/semantic.min.js')}}"></script>

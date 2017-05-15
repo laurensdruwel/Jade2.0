@@ -16,8 +16,12 @@ Route::get('/', function () {
 });
 
 
-Route::get('places', function () {
-    return view('places');
+Route::get('addEvent', function() {
+//    [
+//    'uses' => 'MapController@index',
+//    'as' => 'map'
+    return view('addEvent');
+//]
 });
 
 Route::get('messages', function () {
@@ -36,6 +40,17 @@ Route::get('profile', function () {
     return view('profile');
 });
 
+Route::get('allPlaces', [
+    'uses' => 'EventController@index',
+    'as' => 'allPlaces'
+
+]);
+
+Route::get('map', [
+    'uses' => 'MapController@index',
+    'as' => 'map'
+
+]);
 
 Auth::routes();
 
