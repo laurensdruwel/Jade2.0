@@ -10,12 +10,7 @@
         <li>{{ $event->name }} {{$event->time}} {{ $event->eventId }}
             <button>Present</button>
         </li>
-        <li>{{ $event->name }} {{$event->time}} {{ $event->eventId }}
-            <button>Present</button>
-        </li>
-        <li>{{ $event->name }} {{$event->time}} {{ $event->eventId }}
-            <button>Present</button>
-        </li>   
+
     </ul>
 
     {{--<ul>--}}
@@ -31,7 +26,11 @@
 
 
     @endforeach
+<div style="height: 400px;">
+    {!! Mapper::render() !!}
+</div>
 
 
 
 @endsection
+

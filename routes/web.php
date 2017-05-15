@@ -55,3 +55,13 @@ Route::get('map', [
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+
+Route::post('addThisEvent', [
+    'uses' => 'EventController@addEvent',
+
+    ]
+);
+
+
+
