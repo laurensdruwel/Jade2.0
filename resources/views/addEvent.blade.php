@@ -5,6 +5,17 @@
 @section('contentContainer')
     {{--<div id="map" style="height: 400px">{!!  Mapper::render() !!}</div>--}}
 
+    @if(count($errors) > 0)
+        <div class="alert alert-danger">
+            @foreach($errors->all() as $error)
+                <p>{{ $error }}</p>
+                @endforeach
+        </div>
+
+
+    @endif
+
+
     <form class="ui form"  name="eventForm" method="post" action="addThisEvent">
         <div class="field"><label for="eventname">Name of event</label><input id="eventname" name="eventname" placeholder="Name" type="text" autocomplete="off"></div>
         <div class="two fields">
@@ -13,13 +24,14 @@
         </div>
 
         <div class="three fields">
+            <div class="field"><label for="date">Date</label><input type="date" id="date" name="date" ></div>
             <div class="field"><label for="time">Time</label><input type="time" id="time" name="time" value="12:00"></div>
-        <div class="field"><label for="public">Status</label>
-        <select id="public" name="public">
-            <option value="1" >Public</option>
-            <option value="0">Private</option>
-        </select>
-        </div>
+        {{--<div class="field"><label for="public">Status</label>--}}
+        {{--<select id="public" name="public">--}}
+            {{--<option value="1" >Public</option>--}}
+            {{--<option value="0">Private</option>--}}
+        {{--</select>--}}
+        {{--</div>--}}
             <div class="field"><label for="price">Price</label><input type="number" id="price" name="price" step="0.01" min="0.00" value="0.00"></div>
         </div>
 
@@ -55,6 +67,8 @@
         google.maps.event.addListener(places, 'place_changed', function () {
 
         });
+
+
     });
 
 </script>

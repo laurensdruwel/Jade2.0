@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => env('APP_NAME', 'Jade'),
+    'name' => env('APP_NAME', 'App'),
 
     /*
     |--------------------------------------------------------------------------
@@ -164,6 +164,7 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
 
+
         /*
          * Package Service Providers...
          */
@@ -178,6 +179,8 @@ return [
         Jade\Providers\EventServiceProvider::class,
         Jade\Providers\RouteServiceProvider::class,
         Cornford\Googlmapper\MapperServiceProvider::class,
+        Geocoder\Laravel\Providers\GeocoderService::class,
+
 
     ],
 
@@ -228,7 +231,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Mapper'         => Cornford\Googlmapper\Facades\MapperFacade::class,
-
+        'Geocoder' => Toin0u\Geocoder\Facade\Geocoder::class,
     ],
 
 ];

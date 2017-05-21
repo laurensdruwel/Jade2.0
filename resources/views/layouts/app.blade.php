@@ -55,9 +55,10 @@
                         <li><a href="{{ route('login') }}">Login</a></li>
                         <li><a href="{{ route('register') }}">Register</a></li>
                     @else
-                        <li><a href="places">Add event</a></li>
+                        <li><a href="/addEvent">Add event</a></li>
+                        <li><a href="/allEvents">All events</a></li>
                         {{--<li><a href="messages">Messages</a></li>--}}
-                        <li><a href="profile">Profile</a></li>
+                        <li><a href="/profile">Profile</a></li>
                         {{--<li><a href="settings">Settings</a></li>--}}
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"

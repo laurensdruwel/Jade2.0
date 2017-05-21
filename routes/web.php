@@ -16,13 +16,23 @@ Route::get('/', function () {
 });
 
 
-Route::get('addEvent', function() {
+Route::get('addEvent', function(){
 //    [
 //    'uses' => 'MapController@index',
 //    'as' => 'map'
     return view('addEvent');
 //]
 });
+
+Route::post('addThisEvent', [
+        'uses' => 'EventController@addEvent',
+    ]
+);
+
+
+
+
+
 
 Route::get('messages', function () {
     return view('messages');
@@ -40,15 +50,9 @@ Route::get('profile', function () {
     return view('profile');
 });
 
-Route::get('allPlaces', [
+Route::get('allEvents', [
     'uses' => 'EventController@index',
-    'as' => 'allPlaces'
-
-]);
-
-Route::get('map', [
-    'uses' => 'MapController@index',
-    'as' => 'map'
+    'as' => 'allEvents'
 
 ]);
 
@@ -56,12 +60,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+Route::get('eventDetails', function(){
+    return view('eventDetails');
+});
 
-Route::post('addThisEvent', [
-    'uses' => 'EventController@addEvent',
 
-    ]
+
+
+Route::get('allEvents/{eventId}', 'EventController@getEvent'
 );
-
 
 
